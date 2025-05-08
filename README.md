@@ -48,19 +48,19 @@ Endpoints
 Here is a summary of the API endpoints:
 
 1. Retrieve All Records
-Endpoint: GET /items
+Endpoint: GET /books
 
 Description: Retrieves all items from the database.
 
 2. Retrieve a Single Record
-Endpoint: GET /items/<id>
+Endpoint: GET /book/<id>
 
 Description: Retrieves an item by its ID.
 
-Example: GET /items/1
+Example: GET /book/1
 
 3. Create a New Record
-Endpoint: POST /items
+Endpoint: POST /books
 
 Description: Adds a new item to the database.
 
@@ -72,11 +72,12 @@ json
 Copy
 Edit
 {
-    "name": "Example Item",
-    "price": 12.99
+    "author": "Dr Jameson",
+    "language": "English",
+    "title": "Book of deth"
 }
 4. Update an Existing Record
-Endpoint: PUT /items/<id>
+Endpoint: PUT /book/<id>
 
 Description: Updates the details of an existing item.
 
@@ -88,11 +89,12 @@ json
 Copy
 Edit
 {
-    "name": "Updated Item",
-    "price": 15.49
+    "author": "Dr Jameson",
+    "language": "English",
+    "title": "Book of deth"
 }
 5. Delete a Record
-Endpoint: DELETE /items/<id>
+Endpoint: DELETE /book/<id>
 
 Description: Deletes an item by its ID.
 
@@ -103,7 +105,7 @@ Edit
 RestAPI_withFlask_SQLite/
 │
 ├── app.py              # Main Flask application
-├── database.db         # SQLite database file
-├── models.py           # Database models (if applicable)
+├── books.sqlite         # SQLite database file
+├── db.py           # Database models (if applicable)
 ├── requirements.txt    # Python dependencies
 └── README.md           # Project documentation
